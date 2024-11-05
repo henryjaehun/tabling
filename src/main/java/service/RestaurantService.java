@@ -15,6 +15,11 @@ public class RestaurantService {
     //파트너 가게 등록 기능
     public Long registerRestaurant(RestaurantFormDto restaurantFormDto) {
         Restaurant restaurant = Restaurant.builder()
+                .name(restaurantFormDto.getName())
+                .address(restaurantFormDto.getAddress())
+                .information(restaurantFormDto.getInformation())
+                .build();
+        return jpaRestaurantRepository.save(restaurant).getId();
     }
 
 }

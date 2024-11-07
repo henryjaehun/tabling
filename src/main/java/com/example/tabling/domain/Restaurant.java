@@ -1,4 +1,4 @@
-package domain;
+package com.example.tabling.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

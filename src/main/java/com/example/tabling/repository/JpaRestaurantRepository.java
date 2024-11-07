@@ -1,12 +1,10 @@
-package repository;
+package com.example.tabling.repository;
 
-import domain.Restaurant;
+import com.example.tabling.domain.Restaurant;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
+@Repository
 public interface JpaRestaurantRepository extends JpaRepository<Restaurant, Long> {
-    List<Restaurant> registerRestaurant(String name);
-
 
 }

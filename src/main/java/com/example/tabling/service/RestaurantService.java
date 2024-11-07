@@ -1,10 +1,10 @@
-package service;
+package com.example.tabling.service;
 
-import domain.Restaurant;
-import dto.RestaurantFormDto;
+import com.example.tabling.domain.Restaurant;
+import com.example.tabling.dto.RestaurantFormDto;
+import com.example.tabling.repository.JpaRestaurantRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import repository.JpaRestaurantRepository;
 
 @Service
 @AllArgsConstructor

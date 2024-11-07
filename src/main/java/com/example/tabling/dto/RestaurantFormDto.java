@@ -1,4 +1,4 @@
-package dto;
+package com.example.tabling.dto;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package service;
+package com.example.tabling.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

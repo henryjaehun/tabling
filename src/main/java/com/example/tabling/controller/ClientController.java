@@ -2,6 +2,7 @@ package com.example.tabling.controller;
 
 import com.example.tabling.domain.Client;
 import com.example.tabling.dto.ClientCreateFormDto;
+import com.example.tabling.dto.LoginRequestDto;
 import com.example.tabling.service.ClientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,5 +20,11 @@ public class ClientController {
     public String signup(@RequestBody ClientCreateFormDto clientCreateFormDto) {
         Client client = clientService.create(clientCreateFormDto);
         return "회원가입이 완료되었습니다. ID : " + client.getId();
+    }
+
+    //로그인
+    @PostMapping("/client/login")
+    public String login(@RequestBody LoginRequestDto loginRequest) {
+        //구현할것
     }
 }

@@ -1,12 +1,13 @@
 package com.example.tabling.controller;
 
+import com.example.tabling.domain.Restaurant;
 import com.example.tabling.dto.RestaurantFormDto;
+import com.example.tabling.dto.RestaurantSearchDto;
 import com.example.tabling.service.RestaurantService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -21,4 +22,9 @@ public class RestaurantController {
         return id + "번 매장이 등록 되었습니다.";
     }
 
+    @GetMapping("/search")
+    public List<Restaurant> searchRestaurantByName
+            (@RequestParam RestaurantSearchDto restaurantSearchDto) {
+        return restaurantService.searchRestaurantByName(restaurantSearchDto);
+    }
 }

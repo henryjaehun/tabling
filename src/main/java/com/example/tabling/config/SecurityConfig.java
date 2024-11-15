@@ -15,6 +15,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests((authorizeHttpRequests) -> authorizeHttpRequests
                         .requestMatchers("/client/signup").permitAll() // /client/signup 경로는 인증 없이 접근 허용
+                        .requestMatchers("/restaurant/**", "/search").permitAll()
                         .anyRequest().authenticated()) // 다른 경로는 인증 요구
                 .csrf().disable(); // CSRF 비활성화 (테스트 시에만)
 

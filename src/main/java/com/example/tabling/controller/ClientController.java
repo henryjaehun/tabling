@@ -23,8 +23,8 @@ public class ClientController {
     }
 
     //로그인
-    @PostMapping("/client/login")
-    public String login(@RequestBody LoginRequestDto loginRequest) {
-        //구현할것
-    }
+//    @PostMapping("/client/login")
+//    public String login(@RequestBody LoginRequestDto loginRequest) {
+//        //구현할것
+//    }
 }

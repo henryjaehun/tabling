@@ -9,6 +9,7 @@ import java.util.List;
 
 @Repository
 public interface JpaRestaurantRepository extends JpaRepository<Restaurant, Long> {
+
     @Query("SELECT r FROM Restaurant r WHERE " +
             "(:name IS NULL OR r.name LIKE %:name%) AND " +
             "(:address IS NULL OR r.address LIKE %:address%)")

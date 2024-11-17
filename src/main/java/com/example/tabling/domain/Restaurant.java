@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Table(name = "restaurant")
 public class Restaurant {
+    // 업주가 등록하는 가게의 정보들
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

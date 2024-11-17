@@ -10,6 +10,7 @@ import java.util.List;
 @Repository
 public interface JpaRestaurantRepository extends JpaRepository<Restaurant, Long> {
 
+    // 데이터베이스의 매장을 검색하는 쿼리
     @Query("SELECT r FROM Restaurant r WHERE " +
             "(:name IS NULL OR r.name LIKE %:name%) AND " +
             "(:address IS NULL OR r.address LIKE %:address%)")

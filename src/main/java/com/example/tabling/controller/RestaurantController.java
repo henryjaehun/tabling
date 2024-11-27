@@ -23,6 +23,12 @@ public class RestaurantController {
         return id + "번 매장이 등록 되었습니다.";
     }
 
+    //등록 매장 삭제
+    @DeleteMapping("/delete")
+    public void deleteRestaurant(@RequestBody String name) {
+        restaurantService.deleteRestaurant(name);
+    }
+
     //매장 검색
     @GetMapping("/search")
     public List<Restaurant> searchRestaurantByName

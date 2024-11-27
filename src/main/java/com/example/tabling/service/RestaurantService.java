@@ -27,6 +27,18 @@ public class RestaurantService {
         // jpa를 통해 restaurant 데이터베이스에 저장된다.
     }
 
+    //파트너 가게 삭제
+    public void deleteRestaurant(String name) {
+        jpaRestaurantRepository.deleteByName(name);
+    }
+    // 파트너 가게 조회
+
+
+    // 가게 정보 수정
+
+
+
+    // 이름으로 가게 검색
     public List<Restaurant> searchRestaurantByName(RestaurantSearchDto restaurantSearchDto) {
         return jpaRestaurantRepository.SearchByNameAndAddress(
                 restaurantSearchDto.getName(),

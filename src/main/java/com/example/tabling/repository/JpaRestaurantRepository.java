@@ -15,4 +15,6 @@ public interface JpaRestaurantRepository extends JpaRepository<Restaurant, Long>
             "(:name IS NULL OR r.name LIKE %:name%) AND " +
             "(:address IS NULL OR r.address LIKE %:address%)")
     List<Restaurant> SearchByNameAndAddress(String name, String address);
+
+    void deleteByName(String name);
 }
